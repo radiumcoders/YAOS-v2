@@ -21,8 +21,8 @@ function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    // Initialize audio element
-    audioRef.current = new Audio('/theme-toggle-sound.mp3');
+    // Initialize audio element with MyInstants hosted MP3
+    audioRef.current = new Audio('https://www.myinstants.com/media/sounds/rickroll-but-short.mp3');
   }, []);
 
   const toggleMobileMenu = () => {
