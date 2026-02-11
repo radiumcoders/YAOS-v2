@@ -113,7 +113,7 @@ export default function FireASCIIAnimation({
           Frame: {currentFrame + 1}/{frames.length}
         </div>
       )}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-end justify-center">
         {frames[currentFrame]}
       </div>
     </div>

@@ -46,17 +46,17 @@ function Navbar() {
           </Link>
 
           {/* middle links - hidden on mobile */}
-          <div className="hidden md:flex items-center justify-center gap-4">
-            <Link href={"/"} className="text-sm font-medium">
+          <div className="hidden font-black md:flex items-center justify-center gap-4">
+            <Link href={"/"} className="text-sm ">
               Home
             </Link>
-            <Link href={"/libs"} className="text-sm font-medium">
+            <Link href={"/libs"} className="text-sm">
               Libraries
             </Link>
-            <Link href={"/tools"} className="text-sm font-medium">
+            <Link href={"/tools"} className="text-sm">
               Tools
             </Link>
-            <Link href={"/other"} className="text-sm font-medium">
+            <Link href={"/other"} className="text-sm">
               Other
             </Link>
           </div>

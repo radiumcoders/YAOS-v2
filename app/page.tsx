@@ -4,17 +4,15 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main className="relative min-h-[calc(100dvh-4rem-1px)] w-full">
+    <>
       {/* Fire ASCII Animation Background - Full Screen */}
-      <div className="fixed inset-0 w-screen h-screen pointer-events-none z-0 overflow-hidden">
+      <div className="fixed inset-0 w-screen h-screen pointer-events-none flex items-center justify-end z-0 overflow-hidden">
         <FireASCIIAnimation
           fps={30}
-          className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-none text-orange-500/60"
+          className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-none text-emerald-500/60"
         />
       </div>
-
-      {/* Content - Positioned Above Fire */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative h-[93vh] z-10 max-w-7xl mx-auto px-4 border-x border-border w-full">
         {/* HERO TEXT */}
         <div className="pt-8 sm:pt-12 md:pt-16 pb-4 sm:pb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-geist-pixel-square">
           <h1>
@@ -53,6 +51,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 }
