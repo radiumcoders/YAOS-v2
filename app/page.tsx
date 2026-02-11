@@ -1,3 +1,4 @@
+import Navbar from "@/components/core/navbar";
 import FireASCIIAnimation from "@/components/fire-ascii-animation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -12,7 +13,8 @@ export default function Page() {
           className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl leading-none text-emerald-500/60"
         />
       </div>
-      <div className="relative h-[93vh] z-10 max-w-7xl mx-auto px-4 border-x border-border w-full">
+      <div className="relative h-screen z-10 max-w-7xl mx-auto px-4 border-x border-border w-full">
+        <Navbar />
         {/* HERO TEXT */}
         <div className="pt-8 sm:pt-12 md:pt-16 pb-4 sm:pb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-geist-pixel-square">
           <h1>

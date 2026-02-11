@@ -41,8 +41,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${GeistPixelCircle.variable} ${GeistPixelSquare.variable} ${GeistPixelTriangle.variable}  antialiased min-h-dvh flex flex-col`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <div className="flex-1">{children}</div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
