@@ -106,6 +106,10 @@ export default function FireASCIIAnimation({
     );
   }
 
+  // Split frame into lines and apply gradient
+  const frameLines = frames[currentFrame]?.split('\n') || [];
+  const totalLines = frameLines.length;
+
   return (
     <div className={`absolute inset-0 font-mono whitespace-pre overflow-hidden ${className}`}>
       {showFrameCount && (
@@ -114,7 +118,24 @@ export default function FireASCIIAnimation({
         </div>
       )}
       <div className="absolute inset-0 flex items-end justify-center">
-        {frames[currentFrame]}
+        <div>
+          {frameLines.map((line, index) => {
+            // Calculate opacity: bottom (index = totalLines-1) = 1.0, top (index = 0) = 0.6
+            const opacity = totalLines > 1 
+              ? 0.6 + (0.4 * index / (totalLines - 1))
+              : 1.0;
+            
+            return (
+              <div
+                key={index}
+                className="dark:text-emerald-400 text-emerald-600"
+                style={{ opacity }}
+              >
+                {line}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
