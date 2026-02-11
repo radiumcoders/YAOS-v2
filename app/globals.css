@@ -204,6 +204,27 @@
 }
 
 ::view-transition-new(root) {
+  mask: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmQ4amcwM3BjemtmNTB4cmR6NTd1dHNmeTV1ZjhubHY1ZTJzNXJlNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZE5DmCqNMr3yDXq1Zu/giphy.gif') center / 50vmax no-repeat;
+  animation: theme-scale 1s;
+  animation-fill-mode: both;
+}
+
+::view-transition-old(root),
+.dark::view-transition-old(root) {
+  animation: theme-scale 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes theme-scale {
+  0% {
+    mask-size: 50vmax;
+  }
+  100% {
+    mask-size: 200vmax;
+  }
+}
+
+::view-transition-new(root) {
   mask: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmQ4amcwM3BjemtmNTB4cmR6NTd1dHNmeTV1ZjhubHY1ZTJzNXJlNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ZE5DmCqNMr3yDXq1Zu/giphy.gif') center / 0 no-repeat;
   animation: theme-scale 1s;
   animation-fill-mode: both;

@@ -51,7 +51,7 @@ function Navbar() {
           audioRef.current.pause();
           audioRef.current.currentTime = 0;
         }
-      }, 1000);
+      }, 3000);
     }
     
     // @ts-ignore
@@ -101,7 +101,7 @@ function Navbar() {
           <div className="flex items-center justify-center gap-2">
             {/* todo: redirect to the github repo :D */}
             <Link
-              href={"https://github.com/"}
+              href={"https://github.com/radiumcoders/YAOS-v2"}
               className="hidden md:inline-block"
             >
               <Button size={"icon-lg"} variant="outline">
@@ -223,11 +223,7 @@ function Navbar() {
                 </Button>
               </Link>
 
-              <Button
-                size={"icon-lg"}
-                variant="outline"
-                onClick={toggleTheme}
-              >
+              <Button size={"icon-lg"} variant="outline" onClick={toggleTheme}>
                 {!mounted ? (
                   <SunIcon />
                 ) : theme === "light" ? (
