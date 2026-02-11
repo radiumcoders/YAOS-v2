@@ -51,7 +51,7 @@ function Navbar() {
           audioRef.current.pause();
           audioRef.current.currentTime = 0;
         }
-      }, 3000);
+      }, 1000);
     }
     
     // @ts-ignore
